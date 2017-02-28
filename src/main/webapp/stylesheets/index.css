@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    padding: 30px;
+
+    /*background-image: url("http://www.bypeople.com/wp-content/uploads/2015/05/css-gradient-background.png");*/
+    /*background-repeat: no-repeat;*/
+    background-size: 100%;
+}
+
+.container {
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 48px;
+}
+
+a:link {
+    color: darkblue;
+}
+
+a:visited {
+    color: darkblue;
+}

@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    /*background-image: url("http://www.bypeople.com/wp-content/uploads/2015/05/css-gradient-background.png");*/
+    /*background-repeat: no-repeat;*/
+    background-color: whitesmoke;
+    background-size: 100%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 25px;
+}
+
+li {
+    width: 94.2%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.container {
+    width: 350px;
+    margin: auto;
+    margin-left: 25px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+input, textarea,li {
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+
+
+.section {
+    width: 400px;
+    height: 100%;
+    margin: auto;
+    border: 1px solid black;
+    background-color: lightblue;
+}

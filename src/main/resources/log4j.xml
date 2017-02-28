@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+  <appender name="bulk" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/root.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t] %32.32c{3} -> %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="UserManager" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/UserManager.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.22t][%32.32c{3}] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="MessengerService" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/MessengerService.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t][%32.32c{3}] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="ContextAttributes" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/ContextAttributes.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t][%32.32c{3}] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="LoginPackage" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/Login/root.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.EnhancedPatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t][%.10x][%32.32c{3}] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="Login" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/Login/Login.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.EnhancedPatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t][username=%-10.32x][%20.20c{3}] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="Register" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/Login/Register.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t][%23.23c{3}] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="Homepage" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/Login/Login.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.EnhancedPatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t][username=%-10.32x][%20.20c{3}] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="dao-root" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/dao/dao-root.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.EnhancedPatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t]: %10.10c{1} -> %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="user-dao" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/dao/user-dao.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.EnhancedPatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t]: %.20c{1} -> %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="dialog-dao" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/dao/dialog-dao.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.EnhancedPatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t]: %.20c{1} -> %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="message-dao" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="log/dao/message-dao.log"/>
+    <param name="MaxFileSize" value="10MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <param name="Encoding" value="UTF-8"/>
+    <layout class="org.apache.log4j.EnhancedPatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-21.32t]: %20.20c{1} -> %m%n"/>
+    </layout>
+  </appender>
+
+  <root>
+    <priority value="ERROR"/>
+    <appender-ref ref="bulk"/>
+  </root>
+
+  <logger name="com.vk.kombarov_nikolay.model.user.UserServiceImpl">
+    <level value="TRACE"/>
+    <appender-ref ref="UserManager"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.model.messenger.MessengerServiceImpl">
+    <level value="TRACE"/>
+    <appender-ref ref="MessengerService"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.web.listeners.ContextAttributeListener">
+    <level value="INFO"/>
+    <appender-ref ref="ContextAttributes"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.web.login.servlets">
+    <level value="WARN"/>
+    <appender-ref ref="LoginPackage"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.web.login.Login">
+    <level value="INFO"/>
+    <appender-ref ref="Login"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.web.login.Register">
+    <level value="INFO"/>
+    <appender-ref ref="Register"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.model.database">
+    <level value="TRACE"/>
+    <appender-ref ref="dao-root"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.model.database.UserDao">
+    <level value="TRACE"/>
+    <appender-ref ref="user-dao"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.model.database.DialogDao">
+    <level value="TRACE"/>
+    <appender-ref ref="dialog-dao"/>
+  </logger>
+
+  <logger name="com.vk.kombarov_nikolay.model.database.MessageDao">
+    <level value="TRACE"/>
+    <appender-ref ref="message-dao"/>
+  </logger>
+
+
+
+</log4j:configuration>

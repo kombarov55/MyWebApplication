@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- configuration details go here -->
+
+  <context:property-placeholder/>
+
+  <!--<bean id="sgtPeppers" class="spring.soundsystem.classes.discs.SgtPeppers"-->
+    <!--p:title="Sgt. Pepper's Lonely Hearts Club Band"-->
+    <!--p:artist="The Beatles"/>-->
+
+  <bean class="spring.soundsystem.classes.cdplayers.CDPlayer"
+        c:_0-ref="blankDisc"/>
+
+  <bean id="blankDisc" class="spring.soundsystem.classes.discs.BlankDisc">
+    <constructor-arg value="${disc.title}"/>
+    <constructor-arg value="${disc.artist}"/>
+    <constructor-arg>
+      <list>
+        <value>Sgt. Pepper's Lonely Hearts Club Band</value>
+        <value>With a Little Help from My Friends</value>
+        <value>Lucy in the Sky with Diamonds</value>
+        <value>Getting Better</value>
+        <value>Fixing a Hole</value>
+      </list>
+    </constructor-arg>
+  </bean>
+
+
+
+</beans>

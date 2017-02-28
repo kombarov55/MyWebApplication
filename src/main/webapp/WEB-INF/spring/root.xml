@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <context:component-scan base-package="com.vk.kombarov_nikolay.model"/>
+
+  <!--<bean class="com.vk.kombarov_nikolay.config.RootConfig"/>-->
+
+  <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
+        p:username="root"
+        p:password="Cab11451246"
+        p:url="jdbc:mysql://localhost:3306/myDBTest?useUnicode=true
+            &amp;useJDBCCompliantTimezoneShift=true
+            &amp;useLegacyDatetimeCode=false
+            &amp;serverTimezone=UTC
+            &amp;useSSL=false"
+        p:driverClassName="com.mysql.jdbc.Driver"
+  />
+
+</beans>
