@@ -1,11 +1,9 @@
 package com.vk.kombarov_nikolay.config;
 
-import com.vk.kombarov_nikolay.model.user.User;
-import org.apache.tomcat.jdbc.pool.PoolProperties;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
-import org.springframework.jndi.JndiObjectFactoryBean;
 
 import javax.naming.NamingException;
 import javax.sql.DataSource;
@@ -21,14 +19,10 @@ public class RootConfig {
     @Bean
     public DataSource dataSource() throws NamingException {
         DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setUsername("root");
-        ds.setPassword("Cab11451246");
-        ds.setUrl("jdbc:mysql://localhost:3306/myDBTest?useUnicode=true" +
-                "&useJDBCCompliantTimezoneShift=true" +
-                "&useLegacyDatetimeCode=false" +
-                "&serverTimezone=UTC" +
-                "&useSSL=false");
-        ds.setDriverClassName("com.mysql.jdbc.Driver");
+        ds.setUsername("postgres");
+        ds.setPassword("root");
+        ds.setUrl("jdbc:postgresql://localhost:5432/messenter-new");
+        ds.setDriverClassName("org.postgresql.Driver");
 
         return ds;
     }
